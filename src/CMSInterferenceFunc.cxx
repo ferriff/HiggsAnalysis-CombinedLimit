@@ -1,6 +1,6 @@
 #include "../interface/CMSInterferenceFunc.h"
 #include "TBuffer.h"
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Dense>
 
 class _InterferenceEval {
   public:
