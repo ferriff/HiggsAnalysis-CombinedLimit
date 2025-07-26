@@ -98,7 +98,8 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)/a
 
 $(OBJ_DIR)/a/$(DICTNAME).cc: $(SRC_DIR)/classes_def.xml | $(OBJ_DIR)
-	genreflex $(SRC_DIR)/classes.h -s $< -o $@ --deep --fail_on_warnings --rootmap=$(OBJ_DIR)/a/$(DICTNAME).rootmap --rootmap-lib=$(SONAME) -Isrc -I$(PARENT_DIR)
+	# genreflex $(SRC_DIR)/classes.h -s $< -o $@ --deep --fail_on_warnings --rootmap=$(OBJ_DIR)/a/$(DICTNAME).rootmap --rootmap-lib=$(SONAME) -Isrc -I$(PARENT_DIR)
+	rootcling -v2 -f $@ --deep --fail_on_warnings -rmf $(OBJ_DIR)/a/$(DICTNAME).rootmap -rml $(SONAME) -reflex -inlineInputHeader -failOnWarnings -Isrc -I$(PARENT_DIR) $(SRC_DIR)/classes.h $<
 	mv $(OBJ_DIR)/a/$(DICTNAME).rootmap $(LIB_DIR)/
 	mv $(OBJ_DIR)/a/$(DICTNAME)_rdict.pcm $(LIB_DIR)/
 
