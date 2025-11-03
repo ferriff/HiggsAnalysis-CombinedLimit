@@ -8,7 +8,7 @@
 
 #if ROOT_VERSION_CODE < ROOT_VERSION(6,37,00)
 
-#include "../interface/RooMultiPdfCombine.h"
+#include "RooMultiPdf.h"
 
 #include "RooConstVar.h"
 

@@ -17,13 +17,13 @@
 #include "RooCategory.h"
 #include "RooFitResult.h"
 #include "RooMsgService.h"
+#include "RooMultiPdf.h"
 #include "RooRealVar.h"
 #include "RooWorkspace.h"
 #include "RooStats/ModelConfig.h"
 
 #include "../interface/Combine.h"
 #include "../interface/CascadeMinimizer.h"
-#include "../interface/RooMultiPdfCombine.h"
 #include "../interface/utils.h"
 #include "../interface/ProfilingTools.h"
 

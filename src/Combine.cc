@@ -35,6 +35,7 @@
 #include <RooDataSet.h>
 #include <RooFitResult.h>
 #include <RooMsgService.h>
+#include <RooMultiPdf.h>
 #include <RooPlot.h>
 #include <RooRandom.h>
 #include <RooRealVar.h>
@@ -59,7 +60,6 @@
 #include "../interface/AsimovUtils.h"
 #include "../interface/CascadeMinimizer.h"
 #include "../interface/ProfilingTools.h"
-#include "../interface/RooMultiPdfCombine.h"
 #include "../interface/CMSHistFunc.h"
 #include "../interface/CMSHistSum.h"
 
