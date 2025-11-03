@@ -22,6 +22,7 @@
 #include <RooDataSet.h>
 #include <RooRealVar.h>
 #include <RooCategory.h>
+#include <RooMultiPdf.h>
 #include <RooProdPdf.h>
 #include <RooProduct.h>
 #include <RooSimultaneous.h>
@@ -41,7 +42,6 @@
 #include "../interface/CloseCoutSentry.h"
 #include "../interface/ProfilingTools.h"
 #include "../interface/CombineLogger.h"
-#include "../interface/RooMultiPdfCombine.h"
 
 using namespace std;
 
