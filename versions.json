@@ -1,5 +1,10 @@
 [
   {
+    "version": "main",
+    "title": "main",
+    "aliases": []
+  },
+  {
     "version": "v10.3.3-ROOT-v6-38-00",
     "title": "v10.3.3-ROOT-v6-38-00",
     "aliases": [
