@@ -300,7 +300,7 @@ bool FitDiagnostics::runSpecific(RooWorkspace *w, RooStats::ModelConfig *mc_s, R
   if (res_b) { 
       if (verbose > 1) res_b->Print("V");
       if (fitOut.get()) {
-        if (currentToy_< 1)	fitOut->WriteTObject(res_b,"fit_b");
+        fitOut->WriteTObject(res_b,("fit_b_" + std::to_string(currentToy_)).c_str());
         if (withSystematics)	{
           setFitResultTrees(mc_s->GetNuisanceParameters(),nuisanceParameters_);
           setFitResultTrees(mc_s->GetGlobalObservables(),globalObservables_);
@@ -424,7 +424,7 @@ bool FitDiagnostics::runSpecific(RooWorkspace *w, RooStats::ModelConfig *mc_s, R
       limitErr = r->getError();
       if (verbose > 1) res_s->Print("V");
       if (fitOut.get()){
-	 if (currentToy_<1) fitOut->WriteTObject(res_s, "fit_s");
+	 fitOut->WriteTObject(res_s, ("fit_s_" + std::to_string(currentToy_)).c_str());
 
 	 if (withSystematics)	{
 	   setFitResultTrees(mc_s->GetNuisanceParameters(),nuisanceParameters_);
